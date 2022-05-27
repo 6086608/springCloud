@@ -1,1 +1,46 @@
+spring:
+  profiles:
+    active: local
+  application:
+    name: login
+  servlet:
+    multipart:
+      max-file-size: 500MB
+      max-request-size: 500MB
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  http:
+    encoding:
+      charset: utf-8
+      force: true
+      enabled: true
+
+  main:
+    allow-bean-definition-overriding: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  #        include: ["shutdown","service-registry"]
+  endpoint:
+    shutdown:
+      enabled: true
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/*.xml,classpath:mybatis/mapper/*/*.xml, classpath:mybatis/mapper/*/*/*.xml,classpath:mybatis/mapper/*/*/*/*.xml
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+  eureka:
+    enabled: true
 

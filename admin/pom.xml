@@ -67,11 +67,6 @@
             <version>1.2.46</version>
         </dependency>
         <!--actuator 服务监控 end-->
-        <!--spring cloud alibaba nacos start-->
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-        </dependency>
 
 
 

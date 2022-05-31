@@ -3,7 +3,7 @@ server:
 spring:
   redis:
     password: 123456
-    database: 1
+    database: 0
     port: 6379
     jedis:
       pool:
@@ -44,11 +44,6 @@ spring:
     #druid.keep-alive: true
     # 通过connectProperties属性来打开mergeSql功能；慢SQL记录:单位秒
     druid.connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
-  cloud:
-    nacos:
-      discovery:
-        server-addr: 172.21.32.104:8848
-#        register-enabled: false
 logging:
   level:
     com.youmatech.zhsq.admin.dao: DEBUG
